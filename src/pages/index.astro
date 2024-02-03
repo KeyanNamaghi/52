@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="mx-auto px-4 pt-16 mb-16 text-white">
+      <div>
+        <div class="inline-flex">
+          <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold mb-8">fifty two</h1>
+        </div>
+        <p class="mb-4 text-sm">A project to create something new every week for a year</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <Card title="Argdle" body="Guess the price of the Argos item" href="argdle" image="argdle.png" />
+          <Card title="Ikeadle UK" body="Guess the price of the British Ikea item" href="ikeadle-gb" image="ikeadle-gb.png" />
+          <Card title="Ikeadle Slovakia" body="Guess the price of the Slovakian Ikea item" href="ikeadle-sk" image="ikeadle-sk.png" />
+          <Card title="Listle" body="Some placeholder text" href="listle" image="https://placehold.co/1000x1000" />
+          <Card title="Fifty Two" body="Some placeholder text" href="fifty-two" image="https://placehold.co/1000x1000" />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

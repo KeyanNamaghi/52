@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+export function getStaticPaths() {
+  const ids = ['argdle', 'ikeadle-gb', 'ikeadle-sk']
+
+  return ids.map(id => {
+    return { params: { id } }
+  })
+}
+
+const { id } = Astro.params
+
+const data = {
+  argdle: 'Argdle',
+  'ikeadle-gb': 'Ikeadle UK',
+  'ikeadle-sk': 'Ikeadle Slovakia',
+}[id]
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="text-white mx-auto px-4 pt-16 mb-16 flex flex-col">
+    <div class="inline-flex mx-auto">
+      <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold mb-8">{data}</h1>
+    </div>
+    <div class="flex flex-col mx-auto">
+      <img src={`/${id}.png`} alt="" class="rounded w-64" transition:name={id} />
+    </div>
+  </div>
+</Layout>
