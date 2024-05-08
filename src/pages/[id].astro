@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 
 export function getStaticPaths() {
-  const ids = ['argdle', 'ikeadle-gb', 'ikeadle-sk']
+  const ids = ['argdle', 'ikeadle-gb', 'ikeadle-sk', 'ikeadle', 'wrapped', 'chard', 'fusdle']
 
   return ids.map(id => {
     return { params: { id } }
@@ -15,6 +15,10 @@ const data = {
   argdle: 'Argdle',
   'ikeadle-gb': 'Ikeadle UK',
   'ikeadle-sk': 'Ikeadle Slovakia',
+  ikeadle: 'Ikeadle',
+  wrapped: 'Wrapped',
+  chard: 'Chard',
+  fusdle: 'Fusdle',
 }[id]
 ---
 
