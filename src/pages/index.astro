@@ -1,23 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import json from '../data/data.json'
+
+const projects = Object.entries(json).map(([id, data]) => ({ id, ...data }))
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Keyan Namaghi">
   <main>
-    <div class="mx-auto px-4 pt-16 mb-16 text-white">
+    <div class="mx-auto px-16 pt-16 mb-16 text-white">
       <div>
-        <div class="inline-flex">
-          <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold mb-8">fifty two</h1>
+        <div class="flex gap-1 mb-12 items-end">
+          <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold">Portfolio</h1>
+          <a href="https://www.keyan.dev/me" transition:name="sub-header" class="text-sm tracking-wider underline underline-offset-4">keyan namaghi</a>
         </div>
-        <p class="mb-4 text-sm">A collection of things I've made in 2024</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-          <Card title="Argdle" body="Guess the price of the Argos item" href="argdle" image="argdle.png" />
-          <Card title="Ikeadle UK" body="Guess the price of the British Ikea item" href="ikeadle-gb" image="ikeadle-gb.png" />
-          <Card title="Ikeadle Slovakia" body="Guess the price of the Slovakian Ikea item" href="ikeadle-sk" image="ikeadle-sk.png" />
-          <Card title="Wrapped" body="Relationship wrapped" href="wrapped" image="wrapped.png" />
-          <Card title="Fusdle" body="Who's that pokemon?" href="fusdle" image="fusdle.png" />
-          <Card title="Chard" body="Eat your greens" href="chard" image="chard.png" />
+          {projects.map(({ id, name, caption }) => <Card title={name} body={caption} name={id} />)}
         </div>
       </div>
     </div>

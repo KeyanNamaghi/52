@@ -1,18 +1,18 @@
 ---
+import DynamicImage from './DynamicImage.astro'
+
 interface Props {
   title: string
   body: string
-  href: string
-  image: string
+  name: string
 }
 
-const { href, title, body, image } = Astro.props
-const imageTransitionName = `${href ? href : title}`
+const { title, body, name } = Astro.props
 ---
 
 <li class="link-card">
-  <a href={'/' + href} data-astro-prefetch>
-    <img src={image} alt="" class="rounded-t-lg" transition:name={imageTransitionName} />
+  <a href={'/' + name} data-astro-prefetch>
+    <DynamicImage imagePath={`/src/assets/${name}.png`} altText="" className="rounded" name={name} />
     <div class="p-4">
       <h2 class="m-0 text-xl">
         {title}
@@ -23,6 +23,7 @@ const imageTransitionName = `${href ? href : title}`
     </div>
   </a>
 </li>
+
 <style>
   .link-card {
     list-style: none;

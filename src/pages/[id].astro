@@ -1,33 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import json from '../data/data.json'
+import DynamicImage from '../components/DynamicImage.astro'
 
 export function getStaticPaths() {
-  const ids = ['argdle', 'ikeadle-gb', 'ikeadle-sk', 'wrapped', 'chard', 'fusdle']
-
-  return ids.map(id => {
+  return Object.keys(json).map(id => {
     return { params: { id } }
   })
 }
 
 const { id } = Astro.params
-
-const data = {
-  argdle: 'Argdle',
-  'ikeadle-gb': 'Ikeadle UK',
-  'ikeadle-sk': 'Ikeadle Slovakia',
-  wrapped: 'Wrapped',
-  chard: 'Chard',
-  fusdle: 'Fusdle',
-}[id]
+const { name, subheading, description, link, linkText } = json[id]
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={name}>
   <div class="text-white mx-auto px-4 pt-16 mb-16 flex flex-col">
-    <div class="inline-flex mx-auto">
-      <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold mb-8">{data}</h1>
+    <div class="flex flex-col gap-2 mx-auto text-center mb-8">
+      <h1 transition:name="header" class="uppercase tracking-wider text-orange-500 text-2xl font-bold">{name}</h1>
+      <a href={link} transition:name="sub-header" class="text-sm tracking-wider underline underline-offset-4">{linkText}</a>
     </div>
-    <div class="flex flex-col mx-auto">
-      <img src={`/${id}.png`} alt="" class="rounded w-64" transition:name={id} />
+    <div class="flex flex-col mx-auto w-6/12 justify-center items-center text-center">
+      <DynamicImage imagePath={`/src/assets/${id}.png`} altText="" className="rounded w-64" name={id} />
+      <div transition:name="description">
+        <h2 class="mt-4 text-orange-500 text-xl">{subheading}</h2>
+        <p class="mt-4 text-white text-sm">{description}</p>
+      </div>
     </div>
   </div>
 </Layout>

@@ -1,0 +1,63 @@
+{
+  "argdle": {
+    "name": "Argdle",
+    "caption": "Guess the price of the Argos item",
+    "subheading": "A new Argdle every day!",
+    "description": "A guessing game built using Solid.js where you have to guess the price of an Argos item.",
+    "link": "https://www.argdle.keyan.dev",
+    "linkText": "argdle.keyan.dev"
+  },
+  "ikeadle": {
+    "name": "Ikeadle",
+    "caption": "Guess the price of the Ikea items",
+    "subheading": "Imagine Costcodle but a lot more Swedish",
+    "description": "Daily guessing game for the price of Ikea items from four different countries.",
+    "link": "https://www.ikeadle.keyan.dev",
+    "linkText": "ikeadle.keyan.dev"
+  },
+  "wrapped": {
+    "name": "Relationship Wrapped",
+    "caption": "Like Spotify wrapped for Instagram chats",
+    "subheading": "Still need to make this work for everyone",
+    "description": "Currently it only works for me and my girlfriend but it would be cool if it would work for everyone.",
+    "link": "",
+    "linkText": "unavailable"
+  },
+  "fusdle": {
+    "name": "Fusdle",
+    "caption": "Guess the Pokémon fusion",
+    "description": "",
+    "link": "https://fusions.vercel.app/",
+    "linkText": "fusions.vercel.app"
+  },
+  "outdated": {
+    "name": "Outdated",
+    "caption": "Outdated",
+    "description": "",
+    "link": "",
+    "linkText": "unavailable"
+  },
+  "branch-extension": {
+    "name": "Branch Extension",
+    "caption": "Branch Extension",
+    "description": "",
+    "link": "https://github.com/KeyanNamaghi/ticket-chrome-extension",
+    "linkText": "github"
+  },
+  "rii-doku": {
+    "name": "Rii-doku",
+    "caption": "Sudoku with a Moomin twist",
+    "subheading": "Sudoku... but worse, made for my girlfriend Riina.",
+    "description": "Remove the query string to play the normal version.",
+    "link": "https://riidoku.vercel.app/?mode=moomin",
+    "linkText": "riidoku.vercel.app"
+  },
+  "log-parser": {
+    "name": "Log Parser",
+    "caption": "Parse logs to work out noisy and slow unit tests",
+    "subheading": "Tool for working out where your unit tests suck",
+    "description": "Helped me 10x the speed of my unit tests but they were really bad.",
+    "link": "https://log-ui.vercel.app/",
+    "linkText": "log-ui.vercel.app"
+  }
+}
