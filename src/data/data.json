@@ -1,4 +1,12 @@
 {
+  "binge": {
+    "name": "Binge",
+    "caption": "Like Hinge but infinitely better",
+    "subheading": "Zero rejection with infinite raccoons",
+    "description": "Match and chat with raccoons in your area in this improved version of Hinge.",
+    "link": "https://www.binge.keyan.dev",
+    "linkText": "binge.keyan.dev"
+  },
   "argdle": {
     "name": "Argdle",
     "caption": "Guess the price of the Argos item",
